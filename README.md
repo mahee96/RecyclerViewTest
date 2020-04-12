@@ -2,10 +2,10 @@
 
 Sample RecyclerView implementation (Vertical Scroll List)
 
-This RecyclerView has a custom RecyclerView.Adapter which is used to create the Views that will be displayed, via ViewHolder
+This RecyclerView has a custom RecyclerView.Adapter which is used to create the Views(that are displayed on screen), via ViewHolder
 (custom RecyclerView.ViewHolder)
 
-    custom ViewHolder creates the Child ViewGroup from xml Template(implicit Inflation) or an explicit creation using LayoutInflator
+    custom ViewHolder creates the Child ViewGroup from xml Template(implicit Inflation) or an explicit inflation using LayoutInflator
     with java code.
 
 Working:
