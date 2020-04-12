@@ -36,7 +36,17 @@ Working:
        is 100-8-2 = 90 times.
        This property is significant in implementation of the RECYCLERVIEW Class itself to limit over-recycling when we have reached end
        of source data either direction. 
-
+       
+     9. Now in UI Thread(MainActivity) we need to get the reference to the RecyclerView Container(using findViewbyId) in 
+        activity_main.xml or manually inflate a new ViewGroup which contains a recyclerView as child and anchor its reference locally.
+    10. Set our new recyclerView's Adapter to a new instance of custom RecyclerView.Adapter using mRecyclerView.setAdapter(custom Adptr)
+    11. Create a new LayoutManager from the available types(LinearLayoutManager/GridLayoutManager/StaggeredGridLayoutManager or your own
+        designed LayoutManager) and register this LayoutManager instance to the recyclerView using mRecyclerView.setLayoutManager(layout 
+        manager)
+    12. Optionally set mRecyclerView.setHasFixedSize(true) for optimization if using fixed size recyclerView. For Application such as 
+        GMAIL which retrives TONS of mails this can be set to FALSE as the getItemCount() method will be returning new values, which has 
+        been modified to reflect new SOURCE data count if more available (ex: dynamic fetching of mails from server).     
+        
 Click Events:
 
     1. Since each ViewHolder item has a direct relationship to the actual ViewGroup whose child views we are interested in
