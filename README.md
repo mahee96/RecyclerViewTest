@@ -1,4 +1,4 @@
-# RecyclerView Implementation - ANDROID
+# RecyclerView Implementation - Android
 
 Sample RecyclerView implementation (Vertical Scroll List)
 
